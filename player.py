@@ -12,7 +12,7 @@ class Player:
         pass
 
 
-class RComputerplayer(Player):
+class RandomComputerPlayer(Player):
     def __init__(self, letter):
         super().__init__(letter)
 
@@ -21,7 +21,7 @@ class RComputerplayer(Player):
         return square
 
 
-class Humanplayer(Player):
+class HumanPlayer(Player):
     def __init__(self, letter):
         super().__init__(letter)
 

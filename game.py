@@ -1,4 +1,4 @@
-from player import Humanplayer, RComputerplayer
+from player import HumanPlayer, RandomComputerPlayer
 import time
 
 class TicTacToe:
