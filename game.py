@@ -1,10 +1,14 @@
 from player import HumanPlayer, RandomComputerPlayer
 import time
 
+
 class TicTacToe:
+    """
+    TicTacToe game logic
+    """
     def __init__(self):
         self.board = [' ' for _ in range(9)]  # we will use a single list to rep 3*3 board
-        self.current_winner = None # keep track of winner!
+        self.current_winner = None  # keep track of winner!
 
     def print_board(self):
         # this is just getting the rows
@@ -28,7 +32,7 @@ class TicTacToe:
         return self.board.count(' ')
 
     def make_move(self, square, letter):
-        # if valid move, then make the move (assgin square to letter)
+        # if valid move, then make the move (assign square to letter)
         # then return true. if invalid, return false
         if self.board[square] == ' ':
             self.board[square] = letter
@@ -105,7 +109,7 @@ def play(game , x_player, o_player, print_game= True):
 
 
 if __name__ == "__main__":
-    x_player = Humanplayer('X')
-    o_player = RComputerplayer('O')
+    x_player = HumanPlayer('X')
+    o_player = RandomComputerPlayer('O')
     t = TicTacToe()
     play(t, x_player, o_player, print_game=True)
